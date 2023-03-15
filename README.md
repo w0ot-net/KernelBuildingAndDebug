@@ -279,9 +279,9 @@ qemu-system-x86_64 \
 ```
 IMAGE="ubuntu-image"
 ssh -i $IMAGE/focal.id_rsa -p 10021 -o "StrictHostKeyChecking no" root@localhost
-
-Install GEF and Update .gdbinit File
-
+```
+# Install GEF and Update .gdbinit File
+```
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 file /path/to/your/vmlinux
 target remote localhost:1234
