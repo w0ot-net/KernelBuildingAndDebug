@@ -21,3 +21,4 @@ qemu-system-x86_64 \
 	-nographic \
 	-pidfile vm.pid \
 	2>&1 | tee vm.log
+
