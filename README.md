@@ -254,13 +254,13 @@ sudo rm -rf /mnt/$DIR
 export KERNEL_VERSION="5.15.102"
 export IMAGE="ubuntu-image"
 
-# -m -- sets the amount of memory for the vm
-# -s -- enables kernel debugging
-# -smp -- sets the number of processors (1 may be ideal for kernel debugging)
-# -kerenl -- path to the kernl
-# -append -- boot options
-# -drive -- path to the OS image
-# -net -- set up port forwarding for ssh
+# -m       -- sets the amount of memory for the vm
+# -s       -- enables kernel debugging
+# -smp     -- sets the number of processors (1 may be ideal for kernel debugging)
+# -kernel  -- path to the kernl
+# -append  -- boot options
+# -drive   -- path to the OS image
+# -net     -- set up port forwarding for ssh
 # -pidfile -- Store the QEMU process PID in file
 qemu-system-x86_64 \
 	-m 2G \
