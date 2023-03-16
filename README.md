@@ -254,13 +254,13 @@ sudo rm -rf /mnt/$DIR
 export KERNEL_VERSION="5.15.102"
 export IMAGE="ubuntu-image"
 
-# -m -- sets the amount of memory for the vm
-# -s -- enables kernel debugging
-# -smp -- sets the number of processors (1 may be ideal for kernel debugging)
-# -kerenl -- path to the kernl
-# -append -- boot options
-# -drive -- path to the OS image
-# -net -- set up port forwarding for ssh
+# -m       -- sets the amount of memory for the vm
+# -s       -- enables kernel debugging
+# -smp     -- sets the number of processors (1 may be ideal for kernel debugging)
+# -kernel  -- path to the kernl
+# -append  -- boot options
+# -drive   -- path to the OS image
+# -net     -- set up port forwarding for ssh
 # -pidfile -- Store the QEMU process PID in file
 qemu-system-x86_64 \
 	-m 2G \
@@ -279,9 +279,9 @@ qemu-system-x86_64 \
 ```
 IMAGE="ubuntu-image"
 ssh -i $IMAGE/focal.id_rsa -p 10021 -o "StrictHostKeyChecking no" root@localhost
-
-Install GEF and Update .gdbinit File
-
+```
+# Install GEF and Update .gdbinit File
+```
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 file /path/to/your/vmlinux
 target remote localhost:1234
